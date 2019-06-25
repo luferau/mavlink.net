@@ -30,7 +30,7 @@ namespace MavLinkNet
 {
     public class MavLinkSerialPortTransport : MavLinkGenericTransport
     {
-        public string SerialPortName = "COM1";
+        public string SerialPortName = "COM2";
         public int BaudRate = 115200;
         public int HeartBeatUpdateRateMs = 1000;
 
@@ -70,14 +70,11 @@ namespace MavLinkNet
             mSerialPort.DataReceived += DataReceived;
 
             // Start receive queue worker
-            ThreadPool.QueueUserWorkItem(
-                new WaitCallback(ProcessReceiveQueue), null);
+            ThreadPool.QueueUserWorkItem(new WaitCallback(ProcessReceiveQueue), null);
 
             // Start send queue worker
-            ThreadPool.QueueUserWorkItem(
-                new WaitCallback(ProcessSendQueue));
+            ThreadPool.QueueUserWorkItem(new WaitCallback(ProcessSendQueue));
         }
-
 
         // __ Receive _________________________________________________________
         

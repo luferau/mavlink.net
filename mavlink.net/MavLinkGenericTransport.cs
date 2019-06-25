@@ -1,14 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace MavLinkNet
 {
     public abstract class MavLinkGenericTransport: IDisposable
     {
-        public byte MavlinkSystemId = 200;
-        public byte MavlinkComponentId = 1;
+        public byte MavlinkSystemId = 101;
+        public byte MavlinkComponentId = 170;
         public MavLinkState UavState = new MavLinkState();
 
         public event PacketReceivedDelegate OnPacketReceived;

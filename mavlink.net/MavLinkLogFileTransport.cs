@@ -1,13 +1,10 @@
-﻿using System;
-using System.IO;
-using System.Threading;
-using System.Collections.Generic;
+﻿using System.IO;
 
 namespace MavLinkNet
 {
     public class MavLinkLogFileTransport: MavLinkGenericTransport
     {
-        private string mLogFileName;
+        private readonly string mLogFileName;
 
         public MavLinkLogFileTransport(string logFileName)
         {
