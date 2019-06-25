@@ -213,3 +213,7 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
+/.vs/mavlinkobjectgenerator/v15/Server/sqlite3/storage.ide-wal
+/.vs/mavlinkobjectgenerator/v15/Server/sqlite3/storage.ide-shm
+/.vs/mavlinkobjectgenerator/v15/Server/sqlite3/storage.ide
+/.vs/mavlinkobjectgenerator/v15/Server/sqlite3/db.lock
